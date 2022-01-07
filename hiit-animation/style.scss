@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 150px;
+}
+
+body {
+  font-family: "Bowlby One", cursive;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  align-items: baseline;
+
+  &__dumbell {
+    width: 150px;
+    height: 150px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(90deg);
+    }
+
+    &--1 {
+      img {
+        animation: rotateDumbell 0.2s linear 2s forwards,
+          translateDumbell 2s linear;
+      }
+    }
+
+    &--2 {
+      img {
+        transform: translateX(-50px);
+        animation: rotateDumbellReverse 0.2s linear 2s forwards,
+          translateDumbell 2s linear;
+      }
+    }
+  }
+}
+
+// Animation
+@keyframes rotateDumbell {
+  0% {
+    transform: rotateZ(90deg);
+  }
+
+  100% {
+    transform: rotateZ(135deg);
+  }
+}
+
+@keyframes rotateDumbellReverse {
+  0% {
+    transform: rotateZ(270deg);
+  }
+
+  100% {
+    transform: rotateZ(225deg);
+  }
+}
+
+@keyframes translateDumbell {
+  0% {
+    transform: translateY(-500px) rotateZ(90deg);
+  }
+
+  100% {
+    transform: translateY(0) rotateZ(90deg);
+  }
+}
