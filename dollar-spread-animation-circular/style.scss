@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  &__note {
+    position: absolute;
+    width: 260px;
+    height: 340px;
+    top: 10%;
+    left: 40%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transform-origin: bottom center;
+    }
+  }
+
+  &__image--1 {
+    z-index: 4;
+  }
+
+  &__image--2 {
+    z-index: 2;
+    transform: rotateZ(15deg);
+    transition: transform 1s;
+  }
+
+  &__image--3 {
+    z-index: 3;
+    transform: rotateZ(30deg);
+    transition: transform 1s 2s;
+  }
+
+  &__image--4 {
+    z-index: 4;
+    transform: rotateZ(45deg);
+    transition: transform 1s 3s;
+  }
+
+  &__image--5 {
+    z-index: 5;
+    transform: rotateZ(60deg);
+    transition: transform 1s 4s;
+  }
+
+  &__image--6 {
+    z-index: 6;
+    transform: rotateZ(75deg);
+    transition: transform 1s 5s;
+  }
+
+  &__image--6 {
+    z-index: 7;
+    transform: rotateZ(90deg);
+    transition: transform 1s 6s;
+  }
+
+  &__image--7 {
+    z-index: 7;
+    transform: rotateZ(105deg);
+    transition: transform 1s 7s;
+  }
+
+  &__image--8 {
+    z-index: 8;
+    transform: rotateZ(120deg);
+    transition: transform 1s 8s;
+  }
+
+  &__image--9 {
+    z-index: 9;
+    transform: rotateZ(135deg);
+    transition: transform 1s 9s;
+  }
+}
+
+// Animation
+@keyframes rotateAndSpread {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(15deg);
+  }
+}
