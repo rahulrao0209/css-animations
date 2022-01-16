@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: "Luckiest Guy", cursive;
+  font-family: "Bangers", cursive;
+  font-size: 120px;
+}
+
+.container {
+  width: 1000px;
+  margin: 20% auto 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.container p {
+  animation: sneeze cubic-bezier(1, -0.33, 1, -0.34) 2s infinite alternate;
+}
+// cubic-bezier(1, -0.33, 1, -0.34)
+// cubic-bezier(1,-0.42,0,.41)
+// Animation
+@keyframes sneeze {
+  0% {
+    transform: rotateZ(0deg);
+    opacity: 1;
+  }
+
+  60% {
+    transform: rotateZ(0deg);
+    opacity: 1;
+  }
+
+  80% {
+  }
+
+  90% {
+  }
+
+  100% {
+    transform: rotateZ(270deg);
+    opacity: 1;
+  }
+}
