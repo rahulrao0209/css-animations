@@ -30,137 +30,115 @@ html {
   }
 
   &__image--1 {
-    z-index: 1;
+    transform: rotateZ(-15deg);
   }
 
   &__image--2 {
-    z-index: 2;
     transform: rotateZ(15deg);
     transition: transform 1s;
   }
 
   &__image--3 {
-    z-index: 3;
     transform: rotateZ(30deg);
     transition: transform 1s 2s;
   }
 
   &__image--4 {
-    z-index: 4;
     transform: rotateZ(45deg);
     transition: transform 1s 3s;
   }
 
   &__image--5 {
-    z-index: 5;
     transform: rotateZ(60deg);
     transition: transform 1s 4s;
   }
 
   &__image--6 {
-    z-index: 6;
     transform: rotateZ(75deg);
     transition: transform 1s 5s;
   }
 
   &__image--6 {
-    z-index: 7;
     transform: rotateZ(90deg);
     transition: transform 1s 6s;
   }
 
   &__image--7 {
-    z-index: 7;
     transform: rotateZ(105deg);
     transition: transform 1s 7s;
   }
 
   &__image--8 {
-    z-index: 8;
     transform: rotateZ(120deg);
     transition: transform 1s 8s;
   }
 
   &__image--9 {
-    z-index: 9;
     transform: rotateZ(135deg);
     transition: transform 1s 9s;
   }
 
   &__image--10 {
-    z-index: 10;
     transform: rotateZ(150deg);
     transition: transform 1s 10s;
   }
 
   &__image--11 {
-    z-index: 11;
     transform: rotateZ(175deg);
     transition: transform 1s 11s;
   }
 
   &__image--12 {
-    z-index: 12;
     transform: rotateZ(190deg);
     transition: transform 1s 12s;
   }
 
   &__image--13 {
-    z-index: 13;
     transform: rotateZ(205deg);
     transition: transform 1s 13s;
   }
 
   &__image--14 {
-    z-index: 14;
     transform: rotateZ(220deg);
     transition: transform 1s 14s;
   }
 
   &__image--15 {
-    z-index: 15;
     transform: rotateZ(235deg);
     transition: transform 1s 15s;
   }
 
   &__image--16 {
-    z-index: 16;
     transform: rotateZ(250deg);
     transition: transform 1s 16s;
   }
 
   &__image--17 {
-    z-index: 17;
     transform: rotateZ(265deg);
     transition: transform 1s 17s;
   }
 
   &__image--18 {
-    z-index: 18;
     transform: rotateZ(280deg);
     transition: transform 1s 18s;
   }
 
   &__image--19 {
-    z-index: 19;
     transform: rotateZ(295deg);
     transition: transform 1s 19s;
   }
 
   &__image--20 {
-    z-index: 20;
     transform: rotateZ(310deg);
     transition: transform 1s 20s;
   }
 
   &__image--21 {
-    z-index: 21;
     transform: rotateZ(325deg);
     transition: transform 1s 21s;
   }
 
   &__image--22 {
-    z-index: 22;
     transform: rotateZ(340deg);
     transition: transform 1s 22s;
   }
