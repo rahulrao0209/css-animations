@@ -1,3 +1,5 @@
+@import "animation";
+
 *,
 *::before,
 *::after {
@@ -27,130 +29,135 @@ html {
       height: 100%;
       transform-origin: bottom center;
     }
+
+    @media (max-width: 860px) {
+      width: 130px;
+      height: 170px;
+      top: 30%;
+    }
+
+    @media (max-width: 500px) {
+      width: 120px;
+      height: 150px;
+      top: 30%;
+      left: 35%;
+    }
   }
 
   &__image--1 {
-    transform: rotateZ(-15deg);
+    animation: spread-1 1s linear 0 forwards;
   }
 
   &__image--2 {
-    transform: rotateZ(15deg);
-    transition: transform 1s;
+    animation: spread-2 1s linear 0.5 forwards;
   }
 
   &__image--3 {
-    transform: rotateZ(30deg);
-    transition: transform 1s 2s;
+    animation: spread-3 1s linear 2s forwards;
   }
 
   &__image--4 {
-    transform: rotateZ(45deg);
-    transition: transform 1s 3s;
+    animation: spread-4 1s linear 3s forwards;
   }
 
   &__image--5 {
-    transform: rotateZ(60deg);
-    transition: transform 1s 4s;
+    animation: spread-5 1s linear 4s forwards;
   }
 
   &__image--6 {
-    transform: rotateZ(75deg);
-    transition: transform 1s 5s;
-  }
-
-  &__image--6 {
-    transform: rotateZ(90deg);
-    transition: transform 1s 6s;
+    animation: spread-6 1s linear 5s forwards;
   }
 
   &__image--7 {
-    transform: rotateZ(105deg);
-    transition: transform 1s 7s;
+    animation: spread-7 1s linear 6s forwards;
   }
 
   &__image--8 {
-    transform: rotateZ(120deg);
-    transition: transform 1s 8s;
+    animation: spread-8 1s linear 7s forwards;
   }
 
   &__image--9 {
-    transform: rotateZ(135deg);
-    transition: transform 1s 9s;
+    animation: spread-9 1s linear 8s forwards;
   }
 
   &__image--10 {
-    transform: rotateZ(150deg);
-    transition: transform 1s 10s;
+    animation: spread-10 1s linear 9s forwards;
   }
 
   &__image--11 {
-    transform: rotateZ(175deg);
-    transition: transform 1s 11s;
+    animation: spread-11 1s linear 10s forwards;
   }
 
   &__image--12 {
-    transform: rotateZ(190deg);
-    transition: transform 1s 12s;
+    animation: spread-12 1s linear 11s forwards;
   }
 
   &__image--13 {
-    transform: rotateZ(205deg);
-    transition: transform 1s 13s;
+    animation: spread-13 1s linear 12s forwards;
   }
 
   &__image--14 {
-    transform: rotateZ(220deg);
-    transition: transform 1s 14s;
+    animation: spread-14 1s linear 13s forwards;
   }
 
   &__image--15 {
-    transform: rotateZ(235deg);
-    transition: transform 1s 15s;
+    animation: spread-15 1s linear 14s forwards;
   }
 
   &__image--16 {
-    transform: rotateZ(250deg);
-    transition: transform 1s 16s;
+    animation: spread-16 1s linear 15s forwards;
   }
 
   &__image--17 {
-    transform: rotateZ(265deg);
-    transition: transform 1s 17s;
+    animation: spread-17 1s linear 16s forwards;
   }
 
   &__image--18 {
-    transform: rotateZ(280deg);
-    transition: transform 1s 18s;
+    animation: spread-18 1s linear 17s forwards;
   }
 
   &__image--19 {
-    transform: rotateZ(295deg);
-    transition: transform 1s 19s;
+    animation: spread-19 1s linear 18s forwards;
   }
 
   &__image--20 {
-    transform: rotateZ(310deg);
-    transition: transform 1s 20s;
+    animation: spread-20 1s linear 19s forwards;
   }
 
   &__image--21 {
-    transform: rotateZ(325deg);
-    transition: transform 1s 21s;
+    animation: spread-21 1s linear 20s forwards;
   }
 
   &__image--22 {
-    transform: rotateZ(340deg);
-    transition: transform 1s 22s;
+    animation: spread-22 1s linear 21s forwards;
+  }
+
+  &__image--23 {
+    animation: spread-23 1s linear 22s forwards;
   }
 }
 
 // Animation
-@keyframes rotateAndSpread {
-  0% {
-    transform: rotateZ(0);
-  }
-
-  100% {
-    transform: rotateZ(15deg);
-  }
-}
+@include dollarSpreadAnimation(spread-1, 15deg);
+@include dollarSpreadAnimation(spread-2, 30deg);
+@include dollarSpreadAnimation(spread-3, 45deg);
+@include dollarSpreadAnimation(spread-4, 60deg);
+@include dollarSpreadAnimation(spread-5, 75deg);
+@include dollarSpreadAnimation(spread-6, 90deg);
+@include dollarSpreadAnimation(spread-7, 105deg);
+@include dollarSpreadAnimation(spread-8, 120deg);
+@include dollarSpreadAnimation(spread-9, 135deg);
+@include dollarSpreadAnimation(spread-10, 150deg);
+@include dollarSpreadAnimation(spread-11, 165deg);
+@include dollarSpreadAnimation(spread-12, 180deg);
+@include dollarSpreadAnimation(spread-13, 195deg);
+@include dollarSpreadAnimation(spread-14, 210deg);
+@include dollarSpreadAnimation(spread-15, 225deg);
+@include dollarSpreadAnimation(spread-16, 240deg);
+@include dollarSpreadAnimation(spread-17, 255deg);
+@include dollarSpreadAnimation(spread-18, 270deg);
+@include dollarSpreadAnimation(spread-19, 285deg);
+@include dollarSpreadAnimation(spread-20, 300deg);
+@include dollarSpreadAnimation(spread-21, 315deg);
+@include dollarSpreadAnimation(spread-22, 330deg);
+@include dollarSpreadAnimation(spread-23, 345deg);

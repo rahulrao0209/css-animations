@@ -1,0 +1,11 @@
+@mixin dollarSpreadAnimation($name, $rotation) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotateZ(0);
+    }
+
+    100% {
+      transform: rotateZ($rotation);
+    }
+  }
+}
