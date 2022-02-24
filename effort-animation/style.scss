@@ -5,6 +5,22 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 100px;
+
+  @media screen and (max-width: 700px) {
+    *,
+    *::before,
+    *::after {
+      font-size: 60px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    *,
+    *::before,
+    *::after {
+      font-size: 80px;
+    }
+  }
 }
 
 .container {
@@ -37,6 +53,28 @@
       width: 100%;
       height: 100%;
       animation: rotateGear 2s linear infinite;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .container {
+      min-width: 600px;
+      &__gear,
+      &__hammer {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .container {
+      min-width: 400px;
+      &__gear,
+      &__hammer {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }
