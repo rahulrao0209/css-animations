@@ -7,6 +7,27 @@
   box-sizing: border-box;
   font-size: 180px;
 }
+@media screen and (max-width: 700px) {
+  *,
+*::before,
+*::after {
+    font-size: 150px;
+  }
+}
+@media screen and (max-width: 530px) {
+  *,
+*::before,
+*::after {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 400px) {
+  *,
+*::before,
+*::after {
+    font-size: 95px;
+  }
+}
 
 body {
   font-family: "Bowlby One", cursive;
@@ -46,6 +67,33 @@ body {
 }
 .container__letter {
   animation: jump 0.6s cubic-bezier(0.99, -0.13, 1, -0.39) 2s;
+}
+@media screen and (max-width: 700px) {
+  .container .container__dumbell {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .container {
+    min-width: 200px;
+  }
+  .container .container__dumbell {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container .container__dumbell {
+    width: 75px;
+    height: 60px;
+  }
+  .container .container__dumbell--1 {
+    transform: translateX(16px);
+  }
+  .container .container__dumbell--2 {
+    transform: translateX(-25px);
+  }
 }
 
 @keyframes rotateDumbell {
