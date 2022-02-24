@@ -61,3 +61,37 @@
     transform: rotateZ(-45deg);
   }
 }
+
+@media screen and (max-width: 700px) {
+  *,
+  *::before,
+  *::after {
+    font-size: 80px;
+  }
+
+  .container {
+    min-width: 600px;
+    &__gear,
+    &__hammer {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  *,
+  *::before,
+  *::after {
+    font-size: 60px;
+  }
+
+  .container {
+    min-width: 400px;
+    &__gear,
+    &__hammer {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
