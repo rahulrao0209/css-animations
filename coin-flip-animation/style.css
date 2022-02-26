@@ -17,12 +17,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 50rem;
 }
 
 .container {
   width: 200px;
   height: 200px;
-  animation: flip 3s forwards;
+  animation: flip 2.5s forwards;
 }
 .container__image {
   width: 100%;
