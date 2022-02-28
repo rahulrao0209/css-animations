@@ -1,0 +1,130 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50vh;
+}
+
+.image-container__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+.image-container__image--1 {
+  background-image: radial-gradient(#c6ffdd, #fbd786, #f7797d);
+  opacity: 0;
+  animation: fadeInScaleOut 6s infinite alternate linear 30s forwards, fadeOutScaleIn 6s infinite alternate linear 36s forwards;
+}
+.image-container__image--2 {
+  background-image: radial-gradient(#3a1c71, #d76d77, #ffaf7b);
+  opacity: 0;
+  animation: fadeInScaleOut 6s infinite alternate linear 20s forwards, fadeOutScaleIn 6s infinite alternate linear 26s forwards;
+}
+.image-container__image--3 {
+  background-image: radial-gradient(#159957, #155799);
+  opacity: 0;
+  animation: fadeInScaleOut 6s infinite alternate linear 10s forwards, fadeOutScaleIn 6s infinite alternate linear 16s forwards;
+}
+.image-container__image--4 {
+  background-image: radial-gradient(#56ccf2, #2f80ed);
+  animation: fadeInScaleOut 6s infinite alternate linear forwards, fadeOutScaleIn 6s infinite alternate linear 6s forwards;
+}
+
+@keyframes fadeInScaleOut {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(0.1);
+  }
+  20% {
+    opacity: 0.2;
+    transform: scale(0.2);
+  }
+  30% {
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  40% {
+    opacity: 0.4;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(0.7);
+  }
+  80% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  90% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeOutScaleIn {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  10% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 0.7;
+    transform: scale(0.7);
+  }
+  40% {
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 0.4;
+    transform: scale(0.4);
+  }
+  70% {
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  80% {
+    opacity: 0.2;
+    transform: scale(0.2);
+  }
+  90% {
+    opacity: 0.1;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
