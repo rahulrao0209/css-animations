@@ -1,0 +1,65 @@
+@import "animation";
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-size: 10vh;
+}
+
+.container__step {
+  position: absolute;
+  bottom: 0;
+  left: 30vw;
+  // transform: translateX(-30%) rotateZ(90deg);
+  opacity: 0;
+
+  &--1 {
+    animation: step-1 linear 2s forwards;
+  }
+
+  &--2 {
+    animation: step-2 1s linear 2s forwards;
+  }
+
+  &--3 {
+    animation: step-3 2s linear 2s forwards;
+  }
+
+  &--4 {
+    animation: step-4 3s linear 2s forwards;
+  }
+
+  &--5 {
+    animation: step-5 4s linear 2s forwards;
+  }
+
+  &--6 {
+    animation: step-6 5s linear 2s forwards;
+  }
+
+  &--7 {
+    animation: step-7 6s linear 2s forwards;
+  }
+}
+
+// Animation
+@include ladderAnimation(step-1, -0.5em, -50%);
+@include ladderAnimation(step-2, -1em, 0.2em);
+@include ladderAnimation(step-3, -1.5em, 0.9em);
+@include ladderAnimation(step-4, -2em, 1.4em);
+@include ladderAnimation(step-5, -2.5em, 1.9em);
+@include ladderAnimation(step-6, -3em, 2.4em);
+@include ladderAnimation(step-7, -3.5em, 2.9em);

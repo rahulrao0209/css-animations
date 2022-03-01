@@ -1,0 +1,13 @@
+@mixin ladderAnimation($name, $elevation, $translation) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateY(0) translateX(-50%) rotateZ(90deg);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY($elevation) translateX($translation) rotateZ(90deg);
+      opacity: 1;
+    }
+  }
+}

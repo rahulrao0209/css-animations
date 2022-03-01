@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-size: 10vh;
+}
+
+.container__step {
+  position: absolute;
+  bottom: 0;
+  left: 30vw;
+  opacity: 0;
+}
+.container__step--1 {
+  animation: step-1 linear 2s forwards;
+}
+.container__step--2 {
+  animation: step-2 1s linear 2s forwards;
+}
+.container__step--3 {
+  animation: step-3 2s linear 2s forwards;
+}
+.container__step--4 {
+  animation: step-4 3s linear 2s forwards;
+}
+.container__step--5 {
+  animation: step-5 4s linear 2s forwards;
+}
+.container__step--6 {
+  animation: step-6 5s linear 2s forwards;
+}
+.container__step--7 {
+  animation: step-7 6s linear 2s forwards;
+}
+
+@keyframes step-1 {
+  0% {
+    transform: translateY(0) translateX(-50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-0.5em) translateX(-50%) rotateZ(90deg);
+    opacity: 1;
+  }
+}
+@keyframes step-2 {
+  0% {
+    transform: translateY(0) translateX(-50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-1em) translateX(0.2em) rotateZ(90deg);
+    opacity: 1;
+  }
+}
+@keyframes step-3 {
+  0% {
+    transform: translateY(0) translateX(-50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-1.5em) translateX(0.9em) rotateZ(90deg);
+    opacity: 1;
+  }
+}
+@keyframes step-4 {
+  0% {
+    transform: translateY(0) translateX(-50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-2em) translateX(1.4em) rotateZ(90deg);
+    opacity: 1;
+  }
+}
+@keyframes step-5 {
+  0% {
+    transform: translateY(0) translateX(-50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-2.5em) translateX(1.9em) rotateZ(90deg);
+    opacity: 1;
+  }
+}
+@keyframes step-6 {
+  0% {
+    transform: translateY(0) translateX(-50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-3em) translateX(2.4em) rotateZ(90deg);
+    opacity: 1;
+  }
+}
+@keyframes step-7 {
+  0% {
+    transform: translateY(0) translateX(-50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-3.5em) translateX(2.9em) rotateZ(90deg);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
