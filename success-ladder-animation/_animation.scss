@@ -10,4 +10,16 @@
       opacity: 1;
     }
   }
+
+  @keyframes animatePersonIcon {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY($elevation) translateX($translation);
+      opacity: 1;
+    }
+  }
 }
