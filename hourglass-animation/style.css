@@ -17,33 +17,36 @@ html {
 }
 
 body {
-  background-color: #f4f6f8;
+  background-color: #c78a5f;
   box-sizing: border-box;
   height: 100vh;
   display: grid;
   place-items: center;
 }
 body .hourglass {
-  animation: flip 4s infinite;
+  animation: flip 6s infinite;
   position: relative;
 }
 body .hourglass__top {
+  animation: sandflow 2s alternate-reverse infinite;
   width: 40rem;
   height: 20rem;
-  background-color: #edc9af;
+  background-color: rgba(255, 255, 255, 0.6);
   clip-path: ellipse(20rem 16rem at 50% 0%);
   clip-path: ellipse(20rem 20rem at 50% 0%);
   transform: translateY(0.9rem);
 }
 body .hourglass__neck {
+  animation: sandflow 2s alternate infinite 2s;
   width: 8em;
   height: 8em;
-  background-color: #edc9af;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 body .hourglass__bottom {
+  animation: sandflow 2s alternate-reverse infinite 4s;
   width: 40em;
   height: 20em;
-  background-color: #edc9af;
+  background-color: rgba(255, 255, 255, 0.6);
   clip-path: ellipse(20em 20em at 50% 0%);
   transform: translateY(-0.9rem) rotateZ(180deg);
 }
@@ -52,14 +55,14 @@ body .hourglass .masks {
   transform: translateX(8rem);
 }
 body .hourglass .masks--left {
-  background-color: #f4f6f8;
+  background-color: #c78a5f;
   width: 8em;
   height: 8em;
   border-radius: 100%;
   transform: translateX(2rem);
 }
 body .hourglass .masks--right {
-  background-color: #f4f6f8;
+  background-color: #c78a5f;
   width: 8em;
   height: 8em;
   border-radius: 100%;
@@ -88,10 +91,24 @@ body .hourglass::after {
 
 @keyframes flip {
   0% {
-    transform: rotateZ(0);
+    transform: rotateZ(0) scale(1);
+  }
+  50% {
+    transform: rotate(90deg) scale(1.5);
   }
   100% {
-    transform: rotateZ(180deg);
+    transform: rotateZ(180deg) scale(1);
+  }
+}
+@keyframes sandflow {
+  0% {
+    background-color: rgba(230, 186, 106, 0.5);
+  }
+  50% {
+    background-color: rgba(230, 186, 106, 0.5);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.6);
   }
 }
 

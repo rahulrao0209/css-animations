@@ -7,9 +7,8 @@
 }
 
 /* Variables */
-$background: #f4f6f8;
-$sand: #edc9af;
-// $sand: rgb(150, 135, 135);
+$background: #c78a5f;
+$sand: rgba(255, 255, 255, 0.6);
 
 html {
   font-size: 1vw;
@@ -27,10 +26,11 @@ body {
   place-items: center;
 
   .hourglass {
-    animation: flip 4s infinite;
+    animation: flip 6s infinite;
     position: relative;
 
     &__top {
+      animation: sandflow 2s alternate-reverse infinite;
       width: 40rem;
       height: 20rem;
       background-color: $sand;
@@ -40,12 +40,14 @@ body {
     }
 
     &__neck {
+      animation: sandflow 2s alternate infinite 2s;
       width: 8em;
       height: 8em;
       background-color: $sand;
     }
 
     &__bottom {
+      animation: sandflow 2s alternate-reverse infinite 4s;
       width: 40em;
       height: 20em;
       background-color: $sand;
@@ -101,10 +103,28 @@ body {
 // Animation
 @keyframes flip {
   0% {
-    transform: rotateZ(0);
+    transform: rotateZ(0) scale(1);
+  }
+
+  50% {
+    transform: rotate(90deg) scale(1.5);
   }
 
   100% {
-    transform: rotateZ(180deg);
+    transform: rotateZ(180deg) scale(1);
+  }
+}
+
+@keyframes sandflow {
+  0% {
+    background-color: rgb(230, 186, 106, 0.5);
+  }
+
+  50% {
+    background-color: rgb(230, 186, 106, 0.5);
+  }
+
+  100% {
+    background-color: $sand;
   }
 }
