@@ -30,7 +30,7 @@ body {
     position: relative;
 
     &__top {
-      animation: sandflow 2s alternate-reverse infinite;
+      animation: colorTop 12s infinite alternate;
       width: 40rem;
       height: 20rem;
       background-color: $sand;
@@ -40,14 +40,14 @@ body {
     }
 
     &__neck {
-      animation: sandflow 2s alternate infinite 2s;
+      animation: colorNeck 6s infinite;
       width: 8em;
       height: 8em;
       background-color: $sand;
     }
 
     &__bottom {
-      animation: sandflow 2s alternate-reverse infinite 4s;
+      animation: colorBottom 6s infinite alternate;
       width: 40em;
       height: 20em;
       background-color: $sand;
@@ -115,7 +115,35 @@ body {
   }
 }
 
-@keyframes sandflow {
+@keyframes colorTop {
+  0% {
+    background-color: rgb(230, 186, 106, 0.5);
+  }
+
+  50% {
+    background-color: $sand;
+  }
+
+  100% {
+    background-color: $sand;
+  }
+}
+
+@keyframes colorNeck {
+  0% {
+    background-color: $sand;
+  }
+
+  50% {
+    background-color: $sand;
+  }
+
+  100% {
+    background-color: rgb(230, 186, 106, 0.5);
+  }
+}
+
+@keyframes colorBottom {
   0% {
     background-color: rgb(230, 186, 106, 0.5);
   }

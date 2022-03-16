@@ -28,7 +28,7 @@ body .hourglass {
   position: relative;
 }
 body .hourglass__top {
-  animation: sandflow 2s alternate-reverse infinite;
+  animation: colorTop 12s infinite alternate;
   width: 40rem;
   height: 20rem;
   background-color: rgba(255, 255, 255, 0.6);
@@ -37,13 +37,13 @@ body .hourglass__top {
   transform: translateY(0.9rem);
 }
 body .hourglass__neck {
-  animation: sandflow 2s alternate infinite 2s;
+  animation: colorNeck 6s infinite;
   width: 8em;
   height: 8em;
   background-color: rgba(255, 255, 255, 0.6);
 }
 body .hourglass__bottom {
-  animation: sandflow 2s alternate-reverse infinite 4s;
+  animation: colorBottom 6s infinite alternate;
   width: 40em;
   height: 20em;
   background-color: rgba(255, 255, 255, 0.6);
@@ -100,7 +100,29 @@ body .hourglass::after {
     transform: rotateZ(180deg) scale(1);
   }
 }
-@keyframes sandflow {
+@keyframes colorTop {
+  0% {
+    background-color: rgba(230, 186, 106, 0.5);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@keyframes colorNeck {
+  0% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    background-color: rgba(230, 186, 106, 0.5);
+  }
+}
+@keyframes colorBottom {
   0% {
     background-color: rgba(230, 186, 106, 0.5);
   }
