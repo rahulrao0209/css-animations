@@ -28,8 +28,8 @@ body {
 
   .hourglass {
     animation: flip 4s infinite;
-    backdrop-filter: blur(5px);
     position: relative;
+
     &__top {
       width: 40rem;
       height: 20rem;
@@ -51,7 +51,6 @@ body {
       background-color: $sand;
       clip-path: ellipse(20em 20em at 50% 0%);
       transform: translateY(-0.9rem) rotateZ(180deg);
-      backdrop-filter: blur(5px);
     }
 
     .masks {

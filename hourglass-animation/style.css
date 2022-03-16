@@ -25,7 +25,6 @@ body {
 }
 body .hourglass {
   animation: flip 4s infinite;
-  backdrop-filter: blur(5px);
   position: relative;
 }
 body .hourglass__top {
@@ -47,7 +46,6 @@ body .hourglass__bottom {
   background-color: #edc9af;
   clip-path: ellipse(20em 20em at 50% 0%);
   transform: translateY(-0.9rem) rotateZ(180deg);
-  backdrop-filter: blur(5px);
 }
 body .hourglass .masks {
   display: flex;
