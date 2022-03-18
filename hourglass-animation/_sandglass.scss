@@ -1,0 +1,125 @@
+$background: #c4b5ab;
+// $sand: rgba(255, 255, 255, 0.6);
+$sand: #edc9af;
+
+//Sand drip
+$top-drip1: ellipse(80rem 18rem at 50% 100%);
+$top-drip2: ellipse(80rem 12rem at 50% 100%);
+$top-drip3: ellipse(80rem 5rem at 50% 100%);
+$top-drip4: ellipse(80rem 0rem at 50% 100%);
+
+$bottom-drip1: ellipse(80rem 0rem at 50% 0%);
+$bottom-drip2: ellipse(80rem 5rem at 50% 0%);
+$bottom-drip3: ellipse(80rem 12rem at 50% 0%);
+$bottom-drip4: ellipse(80rem 18rem at 50% 0%);
+
+$mid-drip1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+$mid-drip2: polygon(20% 0, 80% 0, 80% 100%, 20% 100%);
+$mid-drip3: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
+$mid-drip4: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+
+.sandglass {
+  position: absolute;
+  left: 2em;
+  top: 2em;
+
+  &__top {
+    animation: topDrip 8s linear infinite;
+    width: 36em;
+    height: 18em;
+    border-radius: 0 0 30rem 30rem;
+    background: $sand;
+    transform: translateX(0rem) translateY(0rem);
+    overflow: hidden;
+
+    clip-path: ellipse(80rem 18rem at 50% 100%);
+  }
+
+  &__neck {
+    animation: midDrip 8s linear infinite;
+    position: absolute;
+    width: 2em;
+    height: 24em;
+    transform: translate(17em);
+    background: $sand;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  &__bottom {
+    animation: bottomDrip 8s linear infinite;
+    width: 36em;
+    height: 18em;
+    background: $sand;
+    border-radius: 0 0 30rem 30rem;
+    clip-path: ellipse(80rem 0rem at 50% 0%);
+    transform: translate(0, 8rem) rotateZ(180deg);
+  }
+}
+
+@keyframes topDrip {
+  0% {
+    clip-path: $top-drip1;
+  }
+
+  25% {
+    clip-path: $top-drip2;
+  }
+
+  50% {
+    clip-path: $top-drip3;
+  }
+
+  75% {
+    clip-path: $top-drip4;
+  }
+
+  100% {
+    clip-path: $top-drip4;
+  }
+}
+
+@keyframes midDrip {
+  0% {
+    opacity: 0;
+    clip-path: $mid-drip1;
+  }
+
+  25% {
+    opacity: 1;
+    clip-path: $mid-drip2;
+  }
+
+  50% {
+    clip-path: $mid-drip3;
+  }
+
+  75% {
+    clip-path: $mid-drip4;
+  }
+
+  100% {
+    clip-path: $mid-drip4;
+  }
+}
+
+@keyframes bottomDrip {
+  0% {
+    clip-path: $bottom-drip1;
+  }
+
+  25% {
+    clip-path: $bottom-drip2;
+  }
+
+  50% {
+    clip-path: $bottom-drip3;
+  }
+
+  75% {
+    clip-path: $bottom-drip4;
+  }
+
+  100% {
+    clip-path: $bottom-drip4;
+  }
+}

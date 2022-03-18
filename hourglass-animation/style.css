@@ -1,3 +1,90 @@
+.sandglass {
+  position: absolute;
+  left: 2em;
+  top: 2em;
+}
+.sandglass__top {
+  animation: topDrip 8s linear infinite;
+  width: 36em;
+  height: 18em;
+  border-radius: 0 0 30rem 30rem;
+  background: #edc9af;
+  transform: translateX(0rem) translateY(0rem);
+  overflow: hidden;
+  clip-path: ellipse(80rem 18rem at 50% 100%);
+}
+.sandglass__neck {
+  animation: midDrip 8s linear infinite;
+  position: absolute;
+  width: 2em;
+  height: 24em;
+  transform: translate(17em);
+  background: #edc9af;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.sandglass__bottom {
+  animation: bottomDrip 8s linear infinite;
+  width: 36em;
+  height: 18em;
+  background: #edc9af;
+  border-radius: 0 0 30rem 30rem;
+  clip-path: ellipse(80rem 0rem at 50% 0%);
+  transform: translate(0, 8rem) rotateZ(180deg);
+}
+
+@keyframes topDrip {
+  0% {
+    clip-path: ellipse(80rem 18rem at 50% 100%);
+  }
+  25% {
+    clip-path: ellipse(80rem 12rem at 50% 100%);
+  }
+  50% {
+    clip-path: ellipse(80rem 5rem at 50% 100%);
+  }
+  75% {
+    clip-path: ellipse(80rem 0rem at 50% 100%);
+  }
+  100% {
+    clip-path: ellipse(80rem 0rem at 50% 100%);
+  }
+}
+@keyframes midDrip {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  25% {
+    opacity: 1;
+    clip-path: polygon(20% 0, 80% 0, 80% 100%, 20% 100%);
+  }
+  50% {
+    clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+  100% {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+}
+@keyframes bottomDrip {
+  0% {
+    clip-path: ellipse(80rem 0rem at 50% 0%);
+  }
+  25% {
+    clip-path: ellipse(80rem 5rem at 50% 0%);
+  }
+  50% {
+    clip-path: ellipse(80rem 12rem at 50% 0%);
+  }
+  75% {
+    clip-path: ellipse(80rem 18rem at 50% 0%);
+  }
+  100% {
+    clip-path: ellipse(80rem 18rem at 50% 0%);
+  }
+}
 *,
 *::before,
 *::after {
@@ -17,36 +104,32 @@ html {
 }
 
 body {
-  background-color: #c78a5f;
+  background: #c4b5ab;
   box-sizing: border-box;
   height: 100vh;
   display: grid;
   place-items: center;
 }
 body .hourglass {
-  animation: flip 6s infinite;
+  animation: flip 8s infinite;
   position: relative;
 }
 body .hourglass__top {
-  animation: colorTop 12s infinite alternate;
   width: 40rem;
   height: 20rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  clip-path: ellipse(20rem 16rem at 50% 0%);
+  background: rgba(255, 255, 255, 0.6);
   clip-path: ellipse(20rem 20rem at 50% 0%);
   transform: translateY(0.9rem);
 }
 body .hourglass__neck {
-  animation: colorNeck 6s infinite;
   width: 8em;
   height: 8em;
-  background-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 body .hourglass__bottom {
-  animation: colorBottom 6s infinite alternate;
   width: 40em;
   height: 20em;
-  background-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   clip-path: ellipse(20em 20em at 50% 0%);
   transform: translateY(-0.9rem) rotateZ(180deg);
 }
@@ -55,14 +138,14 @@ body .hourglass .masks {
   transform: translateX(8rem);
 }
 body .hourglass .masks--left {
-  background-color: #c78a5f;
+  background: #c4b5ab;
   width: 8em;
   height: 8em;
   border-radius: 100%;
   transform: translateX(2rem);
 }
 body .hourglass .masks--right {
-  background-color: #c78a5f;
+  background: #c4b5ab;
   width: 8em;
   height: 8em;
   border-radius: 100%;
@@ -91,46 +174,13 @@ body .hourglass::after {
 
 @keyframes flip {
   0% {
-    transform: rotateZ(0) scale(1);
+    transform: rotateZ(0);
   }
-  50% {
-    transform: rotate(90deg) scale(1.5);
-  }
-  100% {
-    transform: rotateZ(180deg) scale(1);
-  }
-}
-@keyframes colorTop {
-  0% {
-    background-color: rgba(230, 186, 106, 0.5);
-  }
-  50% {
-    background-color: rgba(255, 255, 255, 0.6);
+  75% {
+    transform: rotateZ(0);
   }
   100% {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-}
-@keyframes colorNeck {
-  0% {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  50% {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  100% {
-    background-color: rgba(230, 186, 106, 0.5);
-  }
-}
-@keyframes colorBottom {
-  0% {
-    background-color: rgba(230, 186, 106, 0.5);
-  }
-  50% {
-    background-color: rgba(230, 186, 106, 0.5);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0.6);
+    transform: rotateZ(180deg);
   }
 }
 
