@@ -39,7 +39,7 @@ $mid-drip4: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
     animation: midDrip 8s linear infinite;
     position: absolute;
     width: 2em;
-    height: 24em;
+    height: 26em;
     transform: translate(17em);
     background: $sand;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -80,7 +80,6 @@ $mid-drip4: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
 
 @keyframes midDrip {
   0% {
-    opacity: 0;
     clip-path: $mid-drip1;
   }
 

@@ -17,7 +17,7 @@
   animation: midDrip 8s linear infinite;
   position: absolute;
   width: 2em;
-  height: 24em;
+  height: 26em;
   transform: translate(17em);
   background: #edc9af;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -51,7 +51,6 @@
 }
 @keyframes midDrip {
   0% {
-    opacity: 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   25% {
