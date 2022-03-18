@@ -1,0 +1,144 @@
+$background: #c4b5ab;
+$sand: rgba(255, 255, 255, 0.6);
+
+//Sand drip
+$top-drip1: ellipse(80rem 18rem at 50% 100%);
+$top-drip2: ellipse(80rem 15rem at 50% 100%);
+$top-drip3: ellipse(80rem 12rem at 50% 100%);
+$top-drip4: ellipse(80rem 9rem at 50% 100%);
+$top-drip5: ellipse(80rem 6rem at 50% 100%);
+$top-drip6: ellipse(80rem 0rem at 50% 100%);
+
+$bottom-drip1: ellipse(80rem 0rem at 50% 100%);
+$bottom-drip2: ellipse(80rem 6rem at 50% 100%);
+$bottom-drip3: ellipse(80rem 9rem at 50% 100%);
+$bottom-drip4: ellipse(80rem 12rem at 50% 100%);
+$bottom-drip5: ellipse(80rem 15rem at 50% 100%);
+$bottom-drip6: ellipse(80rem 18rem at 50% 100%);
+
+// $mid-drip1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+// $mid-drip2: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
+// $mid-drip3: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+// $mid-drip4: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+// $mid-drip5: polygon(0 90%, 100% 90%, 100% 100%, 0 100%);
+// $mid-drip6: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+
+$mid-drip1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+$mid-drip2: polygon(10% 0, 100% 20%, 100% 100%, 0 100%);
+$mid-drip3: polygon(20% 0, 100% 50%, 100% 100%, 0 100%);
+$mid-drip4: polygon(50% 0, 100% 70%, 100% 100%, 0 100%);
+$mid-drip5: polygon(50% 0, 100% 90%, 100% 100%, 0 100%);
+$mid-drip6: polygon(50% 0, 100% 100%, 100% 100%, 0 100%);
+
+.sandglass {
+  position: absolute;
+
+  &__top {
+    animation: topDrip 5s ease infinite;
+    width: 36em;
+    height: 18em;
+    border-radius: 0 0 30rem 30rem;
+    background: $sand;
+    transform: translateX(0rem) translateY(0rem);
+    overflow: hidden;
+
+    clip-path: ellipse(80rem 18rem at 50% 100%);
+  }
+
+  &__neck {
+    animation: midDrip 5s ease infinite;
+    width: 2em;
+    height: 8em;
+    transform: translateX(17em);
+    background: $sand;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  &__bottom {
+    animation: bottomDrip 5s ease infinite;
+    width: 36em;
+    height: 18em;
+    background: $sand;
+    border-radius: 0 0 30rem 30rem;
+    clip-path: ellipse(80rem 0rem at 50% 0%);
+    transform: translate(0, 0rem) rotateZ(180deg);
+  }
+}
+
+@keyframes topDrip {
+  0% {
+    clip-path: $top-drip1;
+  }
+
+  20% {
+    clip-path: $top-drip2;
+  }
+
+  40% {
+    clip-path: $top-drip3;
+  }
+
+  60% {
+    clip-path: $top-drip4;
+  }
+
+  80% {
+    clip-path: $top-drip5;
+  }
+
+  100% {
+    clip-path: $top-drip6;
+  }
+}
+
+@keyframes midDrip {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  20% {
+    clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  }
+
+  40% {
+    clip-path: polygon(20% 0, 80% 0, 80% 100%, 20% 100%);
+  }
+
+  60% {
+    clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%);
+  }
+
+  80% {
+    clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+}
+
+@keyframes bottomDrip {
+  0% {
+    clip-path: $bottom-drip1;
+  }
+
+  20% {
+    clip-path: $bottom-drip2;
+  }
+
+  40% {
+    clip-path: $bottom-drip3;
+  }
+
+  60% {
+    clip-path: $bottom-drip4;
+  }
+
+  80% {
+    clip-path: $bottom-drip5;
+  }
+
+  100% {
+    clip-path: $bottom-drip6;
+  }
+}

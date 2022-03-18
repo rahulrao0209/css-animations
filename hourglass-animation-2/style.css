@@ -1,0 +1,178 @@
+.sandglass {
+  position: absolute;
+}
+.sandglass__top {
+  animation: topDrip 5s ease infinite;
+  width: 36em;
+  height: 18em;
+  border-radius: 0 0 30rem 30rem;
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateX(0rem) translateY(0rem);
+  overflow: hidden;
+  clip-path: ellipse(80rem 18rem at 50% 100%);
+}
+.sandglass__neck {
+  animation: midDrip 5s ease infinite;
+  width: 2em;
+  height: 8em;
+  transform: translateX(17em);
+  background: rgba(255, 255, 255, 0.6);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.sandglass__bottom {
+  animation: bottomDrip 5s ease infinite;
+  width: 36em;
+  height: 18em;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0 0 30rem 30rem;
+  clip-path: ellipse(80rem 0rem at 50% 0%);
+  transform: translate(0, 0rem) rotateZ(180deg);
+}
+
+@keyframes topDrip {
+  0% {
+    clip-path: ellipse(80rem 18rem at 50% 100%);
+  }
+  20% {
+    clip-path: ellipse(80rem 15rem at 50% 100%);
+  }
+  40% {
+    clip-path: ellipse(80rem 12rem at 50% 100%);
+  }
+  60% {
+    clip-path: ellipse(80rem 9rem at 50% 100%);
+  }
+  80% {
+    clip-path: ellipse(80rem 6rem at 50% 100%);
+  }
+  100% {
+    clip-path: ellipse(80rem 0rem at 50% 100%);
+  }
+}
+@keyframes midDrip {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  20% {
+    clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+  }
+  40% {
+    clip-path: polygon(20% 0, 80% 0, 80% 100%, 20% 100%);
+  }
+  60% {
+    clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%);
+  }
+  80% {
+    clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
+  }
+  100% {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+}
+@keyframes bottomDrip {
+  0% {
+    clip-path: ellipse(80rem 0rem at 50% 100%);
+  }
+  20% {
+    clip-path: ellipse(80rem 6rem at 50% 100%);
+  }
+  40% {
+    clip-path: ellipse(80rem 9rem at 50% 100%);
+  }
+  60% {
+    clip-path: ellipse(80rem 12rem at 50% 100%);
+  }
+  80% {
+    clip-path: ellipse(80rem 15rem at 50% 100%);
+  }
+  100% {
+    clip-path: ellipse(80rem 18rem at 50% 100%);
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Variables */
+html {
+  font-size: 1vw;
+}
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 0.5vw;
+  }
+}
+
+body {
+  background: #c4b5ab;
+  box-sizing: border-box;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+body .hourglass {
+  position: relative;
+}
+body .hourglass__top {
+  width: 40rem;
+  height: 20rem;
+  background: rgba(255, 255, 255, 0.6);
+  clip-path: ellipse(20rem 20rem at 50% 0%);
+  transform: translateY(0.9rem);
+}
+body .hourglass__neck {
+  width: 8em;
+  height: 8em;
+  background: rgba(255, 255, 255, 0.6);
+}
+body .hourglass__bottom {
+  width: 40em;
+  height: 20em;
+  background: rgba(255, 255, 255, 0.6);
+  clip-path: ellipse(20em 20em at 50% 0%);
+  transform: translateY(-0.9rem) rotateZ(180deg);
+}
+body .hourglass .masks {
+  display: flex;
+  transform: translateX(8rem);
+}
+body .hourglass .masks--left {
+  background: #c4b5ab;
+  width: 8em;
+  height: 8em;
+  border-radius: 100%;
+  transform: translateX(2rem);
+}
+body .hourglass .masks--right {
+  background: #c4b5ab;
+  width: 8em;
+  height: 8em;
+  border-radius: 100%;
+  transform: translateX(-2rem);
+}
+body .hourglass::before {
+  position: absolute;
+  content: "";
+  width: 45rem;
+  height: 1.5rem;
+  background-color: #7e6045;
+  top: 0;
+  left: -2.5rem;
+  z-index: 100;
+}
+body .hourglass::after {
+  position: absolute;
+  content: "";
+  width: 45rem;
+  height: 1.5rem;
+  background-color: #7e6045;
+  bottom: 0;
+  left: -2.5rem;
+  z-index: 100;
+}
+
+/*# sourceMappingURL=style.css.map */
