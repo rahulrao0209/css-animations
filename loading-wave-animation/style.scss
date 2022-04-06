@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf9f6;
+
+  .container {
+    display: flex;
+
+    & > .wave {
+      background-color: #4ca1af;
+      margin-inline: 0.3rem;
+      width: 0.5rem;
+      height: 8rem;
+      border-radius: 10px;
+      animation: loading 1s linear infinite;
+
+      /* Add the delays */
+      &:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+
+      &:nth-child(7) {
+        animation-delay: 0.7s;
+      }
+    }
+  }
+}
+
+// Animation
+@keyframes loading {
+  0% {
+    transform: scaleY(0);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0);
+  }
+}
