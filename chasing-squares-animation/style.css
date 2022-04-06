@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+body .container {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+}
+body .container > span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.4rem;
+  background-color: #d6ae7b;
+  animation: chase 3s linear infinite;
+}
+body .container > span:nth-child(2) {
+  animation-delay: 1s;
+}
+body .container > span:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@keyframes chase {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  12% {
+    top: 0;
+    left: 50%;
+  }
+  25% {
+    top: 0;
+    left: 50%;
+  }
+  37% {
+    top: 50%;
+    left: 50%;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  62% {
+    top: 50%;
+    left: 0;
+  }
+  75% {
+    top: 50%;
+    left: 0;
+  }
+  87% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
