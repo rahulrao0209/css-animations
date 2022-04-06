@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1c2c;
+  overflow: hidden;
+
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: #fff;
+    position: relative;
+
+    @media screen and (min-width: 320px) {
+      font-size: 3rem;
+      letter-spacing: 1.5rem;
+    }
+
+    @media screen and (min-width: 450px) {
+      font-size: 4rem;
+      letter-spacing: 2rem;
+    }
+
+    &::before {
+      content: "Loading..";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #f4d24c;
+      overflow: hidden;
+      border-right: 2px solid #f4d24c;
+      animation: reveal 5s infinite;
+    }
+  }
+}
+
+// Animation
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
