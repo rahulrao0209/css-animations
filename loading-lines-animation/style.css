@@ -25,7 +25,6 @@ body .container {
 body .container span {
   width: 1rem;
   height: 10rem;
-  background-color: #075107;
   margin-inline: 0.2rem;
   animation: loading 0.8s linear infinite;
 }
