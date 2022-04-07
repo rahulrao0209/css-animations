@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body .line {
+  width: 22rem;
+  border-bottom: 4px solid #000;
+  position: relative;
+  animation: seesaw 1.5s linear infinite alternate;
+  /* Create the hexagon */
+}
+body .line .roller {
+  position: absolute;
+  left: 0;
+  bottom: 0rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #000;
+  border-radius: 50%;
+  animation: roller 1.5s linear infinite alternate;
+}
+
+/* Animation */
+@keyframes seesaw {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes roller {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  100% {
+    transform: translateX(20rem) rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
