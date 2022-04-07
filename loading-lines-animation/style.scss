@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf9f6;
+
+  .container {
+    display: flex;
+
+    span {
+      width: 1rem;
+      height: 10rem;
+      background-color: #075107;
+      margin-inline: 0.2rem;
+      animation: loading 0.8s linear infinite;
+    }
+
+    /* Add delay */
+    .l1 {
+      animation-delay: 0.1s;
+      background-color: #67b26f;
+    }
+
+    .l2 {
+      animation-delay: 0.2s;
+      background-color: #4ca2cd;
+    }
+
+    .l3 {
+      animation-delay: 0.3s;
+      background-color: #f3904f;
+    }
+
+    .l4 {
+      animation-delay: 0.4s;
+      background-color: #3b4371;
+    }
+
+    .l5 {
+      animation-delay: 0.5s;
+      background-color: #ee0979;
+    }
+
+    .l6 {
+      animation-delay: 0.6s;
+      background-color: #a770ef;
+    }
+  }
+}
+
+/* Animation */
+@keyframes loading {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  35% {
+    transform: scaleY(1);
+  }
+
+  60% {
+    transform: scaleY(0.1);
+  }
+
+  100% {
+    transform: scaleY(0.1);
+  }
+}
