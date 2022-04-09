@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .wave {
+    position: relative;
+    width: 50rem;
+    height: 50rem;
+
+    & > h2 {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      line-height: 50rem;
+      font-size: 6rem;
+      text-transform: uppercase;
+
+      @media screen and (min-width: 210px) {
+        font-size: 8rem;
+      }
+
+      @media screen and (min-width: 310px) {
+        font-size: 10rem;
+      }
+
+      @media screen and (min-width: 340px) {
+        font-size: 12rem;
+      }
+
+      @media screen and (min-width: 430px) {
+        font-size: 15rem;
+      }
+    }
+
+    & > h2:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 2px #03a9f4;
+    }
+
+    & > h2:nth-child(2) {
+      color: #03a9f4;
+      animation: wave 2s ease-in-out infinite;
+    }
+  }
+}
+
+/* Animation */
+@keyframes wave {
+  0% {
+    clip-path: polygon(
+      0% 27%,
+      28% 43%,
+      49% 54%,
+      75% 57%,
+      100% 53%,
+      100% 100%,
+      1% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0 54%,
+      26% 59%,
+      54% 52%,
+      76% 41%,
+      100% 24%,
+      100% 100%,
+      1% 100%
+    );
+  }
+
+  100% {
+    clip-path: polygon(
+      0% 27%,
+      28% 43%,
+      49% 54%,
+      75% 57%,
+      100% 53%,
+      100% 100%,
+      1% 100%
+    );
+  }
+}
